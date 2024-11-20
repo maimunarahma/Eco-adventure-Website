@@ -1,0 +1,287 @@
+[
+    {
+      "id": 1,
+      "adventureTitle": "Everest Base Camp Trek",
+      "image": "https://i.ibb.co.com/tYr8pmD/hikers-during-the-annapurnas-tour-49.jpg",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "An unforgettable journey to the base of the world’s highest peak.",
+      "adventureCost": 1500,
+      "bookingAvailability": true,
+      "location": "Nepal",
+      "duration": "14 days",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Guided tours", "Meals", "Accommodation"],
+      "ecoFriendlyFeatures": ["Reusable water bottles", "Sustainable lodges"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        {"gear": ["Warm clothing", "Trekking boots"]},
+        {"health": ["Physical fitness required", "Altitude sickness precautions"]}
+      ]
+    },
+    {
+      "id": 2,
+      "adventureTitle": "Great Barrier Reef Dive",
+      "image": "https://i.ibb.co.com/NL6hkLb/Tourism-Tropical-North-Queensland-Yt4-F3c-BPA775-Dwi-3-1110x624.jpg",
+      "categoryName": "Ocean Dives",
+      "shortDescription": "Explore the vibrant underwater world of the Great Barrier Reef.",
+      "adventureCost": 1200,
+      "bookingAvailability": true,
+      "location": "Australia",
+      "duration": "5 days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Scuba gear", "Expert dive guides"],
+      "ecoFriendlyFeatures": ["Marine-safe sunscreen", "Reef-friendly policies"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        {"gear": ["Swimsuit", "Snorkeling equipment"]},
+        {"health": ["Basic swimming skills", "No respiratory issues"]}
+      ]
+    },
+    {
+      "id": 3,
+      "adventureTitle": "African Safari Adventure",
+      "image": "https://i.ibb.co.com/xYSRPRB/african-safari-adventure-guided-tour-1.webp",
+      "categoryName": "Wildlife Safaris",
+      "shortDescription": "Experience the majestic wildlife of Africa up close.",
+      "adventureCost": 2500,
+      "bookingAvailability": true,
+      "location": "Kenya",
+      "duration": "7 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Luxury accommodation", "Guided game drives"],
+      "ecoFriendlyFeatures": ["Solar-powered lodges", "Wildlife conservation fees"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        {"gear": ["Binoculars", "Safari hats"]},
+        {"health": ["Vaccinations recommended", "Carry mosquito repellent"]}
+      ]
+    },
+    {
+      "id": 4,
+      "adventureTitle": "Amazon Rainforest Expedition",
+      "image": "https://i.ibb.co.com/T0VVSPy/manaus-amazon-trips-we.jpg",
+      "categoryName": "Forest Expeditions",
+      "shortDescription": "Immerse yourself in the biodiversity of the Amazon rainforest.",
+      "adventureCost": 1800,
+      "bookingAvailability": true,
+      "location": "Brazil",
+      "duration": "10 days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Guided tours", "Rain gear"],
+      "ecoFriendlyFeatures": ["Eco-lodges", "Locally sourced meals"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        {"gear": ["Waterproof boots", "Insect repellent"]},
+        {"health": ["Malaria precautions", "Carry first-aid kit"]}
+      ]
+    },
+    {
+      "id": 5,
+      "adventureTitle": "Glamping in the Rockies",
+      "image": "https://i.ibb.co.com/b1qmQZT/images-2.jpg",
+      "categoryName": "Camping Retreats",
+      "shortDescription": "Luxury camping experience in the heart of the Rockies.",
+      "adventureCost": 800,
+      "bookingAvailability": true,
+      "location": "USA",
+      "duration": "3 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Luxury tents", "Meals"],
+      "ecoFriendlyFeatures": ["Solar-powered lights", "Leave-no-trace policy"],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        {"gear": ["Warm layers", "Comfortable footwear"]},
+        {"health": ["No specific fitness requirements"]}
+      ]
+    },
+    {
+      "id": 6,
+      "adventureTitle": "Zambezi White Water Rafting",
+      "image": "https://i.ibb.co.com/JcrN2p6/5a.jpg",
+      "categoryName": "River Adventures",
+      "shortDescription": "Thrill-seekers’ paradise on the Zambezi River.",
+      "adventureCost": 1000,
+      "bookingAvailability": true,
+      "location": "Zambia",
+      "duration": "2 days",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Rafting gear", "Safety equipment"],
+      "ecoFriendlyFeatures": ["Eco-certified operations", "No plastic use"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        {"gear": ["Water shoes", "Dry bags"]},
+        {"health": ["Strong swimming skills required", "Physical endurance"]}
+      ]
+    },
+    {
+      "id": 7,
+      "adventureTitle": "Sahara Desert Expedition",
+      "image": "https://i.ibb.co.com/C5rLHKy/images-3.jpg",
+      "categoryName": "Desert Exploration",
+      "shortDescription": "A mesmerizing journey through the endless sands of the Sahara.",
+      "adventureCost": 1400,
+      "bookingAvailability": true,
+      "location": "Morocco",
+      "duration": "5 days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Camel rides", "Meals and accommodation"],
+      "ecoFriendlyFeatures": ["Solar cooking", "Minimal water usage"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        {"gear": ["Desert clothing", "Sunscreen"]},
+        {"health": ["Hydration precautions", "Heat tolerance"]}
+      ]
+    },
+    {
+      "id": 8,
+      "adventureTitle": "Sundarbans Mangrove Forest Adventure",
+      "image": "https://i.ibb.co.com/jg43xhb/Sundarbans-2.jpg",
+      "categoryName": "Mangrove Forest Expeditions",
+      "shortDescription": "Explore the unique ecosystem of the Sundarbans.",
+      "adventureCost": 1200,
+      "bookingAvailability": true,
+      "location": "Bangladesh",
+      "duration": "4 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Boat rides", "Guided tours"],
+      "ecoFriendlyFeatures": ["Community-based tourism", "Wildlife protection fees"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        {"gear": ["Light clothing", "Camera"]},
+        {"health": ["Avoid drinking river water"]}
+      ]
+    },
+    {
+      "id": 9,
+      "adventureTitle": "Grand Canyon Kayak Expedition",
+      "image": "https://i.ibb.co.com/HtttPKm/images-4.jpg",
+      "categoryName": "River Adventures",
+      "shortDescription": "Paddle through the majestic Grand Canyon on the Colorado River.",
+      "adventureCost": 2000,
+      "bookingAvailability": true,
+      "location": "USA",
+      "duration": "7 days",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Kayaking gear", "Camping equipment"],
+      "ecoFriendlyFeatures": ["Minimal waste policy", "Eco-certified guides"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        {"gear": ["Paddling gloves", "Quick-dry clothing"]},
+        {"health": ["Good physical fitness", "Swimming skills"]}
+      ]
+    },
+    {
+      "id": 10,
+      "adventureTitle": "Amazon River Cruise",
+      "image": "https://i.ibb.co.com/VJJ1zqC/Aria-Amazon-Vessel-11-jpg.webp",
+      "categoryName": "River Adventures",
+      "shortDescription": "Relax and explore the wonders of the Amazon River.",
+      "adventureCost": 1800,
+      "bookingAvailability": true,
+      "location": "Peru",
+      "duration": "6 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Luxury cabins", "Meals"],
+      "ecoFriendlyFeatures": ["Solar-powered boats", "Local guides"],
+      "maxGroupSize": 15,
+      "specialInstructions": [
+        {"gear": ["Comfortable clothing", "Sunscreen"]},
+        {"health": ["No specific requirements"]}
+      ]
+    },
+    {
+      "id": 11,
+      "adventureTitle": "Patagonia Ice Hiking",
+      "image": "https://i.ibb.co.com/xF87Qyt/images-5.jpg",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "Trek across stunning glaciers in Patagonia’s rugged wilderness.",
+      "adventureCost": 2200,
+      "bookingAvailability": true,
+      "location": "Chile",
+      "duration": "6 days",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Ice climbing gear", "Experienced guides"],
+      "ecoFriendlyFeatures": ["Leave-no-trace policy", "Eco-friendly transport"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        {"gear": ["Thermal wear", "Trekking poles"]},
+        {"health": ["Basic climbing skills required", "Cold endurance"]}
+      ]
+    },
+    {
+      "id": 12,
+      "adventureTitle": "Maldives Coral Reef Snorkeling",
+      "image": "https://i.ibb.co.com/2Nr6zRT/snorkeling.jpg",
+      "categoryName": "Ocean Dives",
+      "shortDescription": "Discover the vibrant marine life in the crystal-clear waters of the Maldives.",
+      "adventureCost": 900,
+      "bookingAvailability": true,
+      "location": "Maldives",
+      "duration": "3 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Snorkeling gear", "Local guides"],
+      "ecoFriendlyFeatures": ["Marine-safe sunscreen", "No plastic policy"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        {"gear": ["Swimsuit", "Underwater camera"]},
+        {"health": ["Comfortable in water"]}
+      ]
+    },
+    {
+      "id": 13,
+      "adventureTitle": "Yellowstone Wildlife Safari",
+      "image": "https://i.ibb.co.com/vdxhXY2/images-6.jpg",
+      "categoryName": "Wildlife Safaris",
+      "shortDescription": "Witness bison, wolves, and geysers in America’s first national park.",
+      "adventureCost": 1500,
+      "bookingAvailability": true,
+      "location": "USA",
+      "duration": "4 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Guided tours", "Binoculars"],
+      "ecoFriendlyFeatures": ["Electric safari vehicles", "Park conservation fees"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        {"gear": ["Comfortable clothing", "Hiking boots"]},
+        {"health": ["No specific fitness required"]}
+      ]
+    },
+    {
+        "id": 14,
+        "adventureTitle": "Norway Fjord Kayaking",
+        "image": "https://i.ibb.co.com/xgVKR81/73fa2ab77199f56d599d9ee3497cdb705533f394-800x531.webp",
+        "categoryName": "River Adventures",
+        "shortDescription": "Paddle through breathtaking fjords and enjoy serene Nordic beauty.",
+        "adventureCost": 1300,
+        "bookingAvailability": true,
+        "location": "Norway",
+        "duration": "5 days",
+        "adventureLevel": "Intermediate",
+        "includedItems": ["Kayaks", "Safety gear"],
+        "ecoFriendlyFeatures": ["Local organic meals", "Minimal impact policy"],
+        "maxGroupSize": 6,
+        "specialInstructions": [
+          {"gear": ["Waterproof bags", "Warm layers"]},
+          {"health": ["Moderate fitness required"]}
+        ]
+      },
+      {
+        "id": 15,
+        "adventureTitle": "Thar Desert Camel Safari",
+        "image": "https://i.ibb.co.com/DppZZmH/camel-safari-tour-in-the-thar-desert.jpg",
+        "categoryName": "Desert Exploration",
+        "shortDescription": "Ride camels through the golden sands of the Thar Desert.",
+        "adventureCost": 1000,
+        "bookingAvailability": true,
+        "location": "India",
+        "duration": "3 days",
+        "adventureLevel": "Beginner",
+        "includedItems": ["Camel rides", "Tented accommodation"],
+        "ecoFriendlyFeatures": ["Locally sourced food", "Solar-powered lighting"],
+        "maxGroupSize": 10,
+        "specialInstructions": [
+          {"gear": ["Comfortable desert clothing", "Sunglasses"]},
+          {"health": ["Hydration essentials"]}
+        ]
+      }
+    ]

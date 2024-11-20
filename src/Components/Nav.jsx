@@ -1,10 +1,19 @@
+import { useContext } from "react";
 import logo from "../assets/vector-logo-ecotravel-tourism-camping-260nw-1626800671.jpg"
 import { Link } from "react-router-dom";
+import { authContext } from "../Providrs/Authentication";
+
 
 
 const Nav = () => {
+  const {user, signOutUser}=useContext(authContext);
+  console.log(user)
+  const handleSignOut=()=>{
+    signOutUser();
+  }
     return (
-        <div className="flex justify-between items-center mx-auto">
+        <div>
+                <div className="flex justify-between items-center mx-auto">
            <div className="navbar-start">
             <img src={logo} alt="" className="w-[15%]" />
             
@@ -12,7 +21,7 @@ const Nav = () => {
             <div className="hidden md:block">
             <div className="navbar-center   list-none flex justify-center items-center gap-10">
 
-<li><Link to='home'>Home</Link></li>
+<li><Link to=''>Home</Link></li>
 <li><Link to=''>Destinations</Link></li>  
 <li><Link to=''>Tour</Link></li> 
  <li className=""><Link to=''>Why Us</Link></li> 
@@ -21,7 +30,24 @@ const Nav = () => {
             </div>
            
             <div className="navbar-end flex justify-end gap-3">
-                <button className="btn bg-[#2E7D32] text-white "><Link>Login</Link></button>
+            {
+  user ? (
+    <>
+      <h1>{user.email}</h1>
+      <button
+        className="btn bg-[#2E7D32] text-white"
+        onClick={handleSignOut}>
+        Sign Out
+      </button>
+    </>
+  ) : (
+    <button className="btn bg-[#2E7D32] text-white">
+      <Link to="login">Login</Link>
+    </button>
+  )
+}
+               
+            
                 <button className="btn text-[#03A9F4] hidden md:block"><Link>Explore more</Link></button>
             
                     <div className="dropdown">
@@ -57,6 +83,9 @@ const Nav = () => {
 
             </div>
         </div>
+ 
+        </div>
+    
     );
 };
 

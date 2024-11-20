@@ -1,10 +1,13 @@
 import sundarban from "../assets/88Bengal Tiger in Sundarbans.jpg"
 import everest from "../assets/images.jpg"
 import desert from "../assets/4-days-desert-tour-fes-to-marrakech-700x500.webp"
+import AdventureCards from "./AdventureCards";
 
 const Banner = () => {
     return (
-        <div className="w-full mt-5">
+        <div>
+
+<div className="w-full mt-5">
           <div className="carousel ">
   <div id="slide1" className="carousel-item relative w-full">
     <img
@@ -36,6 +39,13 @@ const Banner = () => {
  
 </div>  
         </div>
+        <div className="mt-3">
+        <AdventureCards></AdventureCards>
+        </div>
+    
+        </div>
+  
+        
     );
 };
 

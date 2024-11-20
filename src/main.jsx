@@ -9,10 +9,14 @@ import Details from './Components/Details.jsx'
 import Authentication from './Providrs/Authentication.jsx'
 import SignUp from './Components/SignUp.jsx'
 import Login from './Components/Login.jsx'
+import Error404 from './Components/Error404.jsx'
+import UpdatePassword from './Components/UpdatePassword.jsx'
+
 
 const router=createBrowserRouter([{
    path:'/',
    element:<Authentication><Root></Root></Authentication>,
+   errorElement:<Error404></Error404>,
    children:[{
     path:'/',
     element:<Banner></Banner>,
@@ -21,6 +25,7 @@ const router=createBrowserRouter([{
   {
     path:'/details/:id',
     element:<Details></Details>,
+    loader:()=>fetch(`travels.json`),
   
 
   },{
@@ -29,6 +34,9 @@ const router=createBrowserRouter([{
   },{
     path:'login/register',
     element:<Authentication><SignUp></SignUp></Authentication>
+  },{
+    path:'/updatePassword',
+    element:<UpdatePassword></UpdatePassword>
   }]
 }])
 

@@ -12,6 +12,14 @@ const Login = () => {
         const password= e.target.password.value;
         console.log(email, password)
         LoginUser(email,password)
+      
+.then((result) =>{
+   console.log(result)
+})
+.catch((error)=>{
+    console.log(error)
+}
+)
    }
     return (
         <div className="w-1/2 mx-auto p-6 card-body">
@@ -43,7 +51,7 @@ const Login = () => {
       </label>
       <input type="password" placeholder="password" name='password' className="input input-bordered" required />
       <label className="label">
-        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+        <Link to='/updatePassword'>Forgot password?</Link>
       </label>
       <h3 className="text-black font-bold">Not Registered?<span className="text-red-600"><Link to='register'>Register Now</Link></span></h3>
     </div>

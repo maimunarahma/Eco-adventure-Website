@@ -33,7 +33,7 @@ const Nav = () => {
             {
   user ? (
     <>
-      <h1>{user.email}</h1>
+       <p>Welcome, {user.email}</p>
       <button
         className="btn bg-[#2E7D32] text-white"
         onClick={handleSignOut}>

@@ -2,6 +2,7 @@
     {
       "id": 1,
       "adventureTitle": "Everest Base Camp Trek",
+      "overview": "Embark on an unforgettable journey to the base of the world’s highest peak with the Everest Base Camp Trek. This 14-day advanced-level adventure in Nepal offers guided tours, meals, and accommodation, with eco-friendly practices like reusable water bottles and sustainable lodges. Ideal for small groups of up to 12, it requires physical fitness and preparation for altitude sickness.",
       "image": "https://i.ibb.co.com/tYr8pmD/hikers-during-the-annapurnas-tour-49.jpg",
       "categoryName": "Mountain Treks",
       "shortDescription": "An unforgettable journey to the base of the world’s highest peak.",
@@ -21,6 +22,7 @@
     {
       "id": 2,
       "adventureTitle": "Great Barrier Reef Dive",
+      "overview": "Dive into the vibrant underwater world of the Great Barrier Reef in Australia. This 5-day intermediate-level ocean adventure includes scuba gear and expert dive guides. Enjoy eco-friendly practices like marine-safe sunscreen and reef-friendly policies, with small groups of up to 10 participants.",
       "image": "https://i.ibb.co.com/NL6hkLb/Tourism-Tropical-North-Queensland-Yt4-F3c-BPA775-Dwi-3-1110x624.jpg",
       "categoryName": "Ocean Dives",
       "shortDescription": "Explore the vibrant underwater world of the Great Barrier Reef.",
@@ -40,6 +42,7 @@
     {
       "id": 3,
       "adventureTitle": "African Safari Adventure",
+      "overview": "Experience the majestic wildlife of Kenya on this 7-day African Safari Adventure. Perfect for beginners, this safari offers guided game drives and luxury accommodations while promoting eco-friendly practices like solar-powered lodges and wildlife conservation. Groups are limited to 8 participants.",
       "image": "https://i.ibb.co.com/xYSRPRB/african-safari-adventure-guided-tour-1.webp",
       "categoryName": "Wildlife Safaris",
       "shortDescription": "Experience the majestic wildlife of Africa up close.",

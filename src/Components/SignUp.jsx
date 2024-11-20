@@ -2,9 +2,11 @@ import { useContext } from "react";
 // import { AuthContext } from "../Providers/Authentication";
 import { authContext } from "../Providrs/Authentication";
 import { Link, useNavigate } from "react-router-dom";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { auth } from "../../firebase";
 
 const SignUp = () => {
-      const {createUser}= useContext(authContext);
+      const {createUser,setUser}= useContext(authContext);
       console.log(createUser)
       const navigate = useNavigate();
         const handleForm=(e)=>{
@@ -13,7 +15,14 @@ const SignUp = () => {
              const password= e.target.password.value;
              console.log(email, password)
              createUser(email,password)
-             navigate("/login")
+             .then((result) =>{
+             setUser(result.user);
+             navigate('/');
+             })
+          .catch((error)=>{
+              console.log(error)
+             })
+             
         }
     return (
         <div className="w-full p-6">

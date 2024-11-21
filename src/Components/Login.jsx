@@ -7,28 +7,32 @@ import 'react-toastify/dist/ReactToastify.css';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase";
 import { FcGoogle } from "react-icons/fc";
+
 const Login = () => {
+  // console.log(name)
 
     const {LoginUser}=useContext(authContext);
     const navigate = useNavigate();
   const [err,setErr]=useState(null)
     const handleForm=(e)=>{
         e.preventDefault();
+      
+
         const email= e.target.email.value;
         const password= e.target.password.value;
         console.log(email, password)
         LoginUser(email,password)
     
 .then((result) =>{
-   console.log(result)
-   navigate('/')
+   console.log(result.user)
+   navigate("/")
    
   
 })
 .catch((error)=>{
     console.log(error)
     setErr(error)
-    // toast.error('Login failed! Please check your credentials. ❌');
+   
 })
     }
     const provider=new GoogleAuthProvider();

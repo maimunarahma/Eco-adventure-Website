@@ -13,6 +13,10 @@ import Error404 from './Components/Error404.jsx'
 import UpdatePassword from './Components/UpdatePassword.jsx'
 import MyProfile from './Components/MyProfile.jsx'
 import Privet from './route/privet.jsx'
+import About from './Components/About.jsx'
+import ProfileUpdate from './Components/ProfileUpdate.jsx'
+import Experience from './Components/Experience.jsx'
+import River from './Components/River.jsx'
 
 
 const router=createBrowserRouter([{
@@ -42,7 +46,22 @@ const router=createBrowserRouter([{
   },{
     path:'myProfile',
     element:<Privet><MyProfile></MyProfile></Privet>,
-  }]
+  },{
+    path:'about',
+    element:<About></About>
+  },{
+    path:'/myProfile/update',
+    element:<ProfileUpdate></ProfileUpdate>
+  },{
+    path:'experience',
+    element:<Experience></Experience>
+  },
+  {
+    path:'/experience/river',
+    element:<River></River>,
+    loader:()=>fetch(`travels.json`)
+  }
+]
 }])
 
 createRoot(document.getElementById('root')).render(

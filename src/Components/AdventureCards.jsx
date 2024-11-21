@@ -16,8 +16,8 @@ const AdventureCards = () => {
     const {user}=useContext(authContext)
     console.log(user)
     const datas=useLoaderData();
-    console.log(datas)
-    datas.map(data=>console.log(data.adventureTitle))
+    // console.log(datas)
+  
     useEffect(() => {
         AOS.init();
       }, []);

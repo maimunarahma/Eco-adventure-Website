@@ -7,10 +7,7 @@ import { authContext } from "../Providrs/Authentication";
 
 const Nav = () => {
   const {user, signOutUser}=useContext(authContext);
-  console.log(user)
-  const location = useLocation(); // Get current location
-  const currentUrl = location.pathname;
-  console.log(currentUrl)
+ 
   const handleSignOut=()=>{
     signOutUser();
   }
@@ -25,7 +22,7 @@ const Nav = () => {
             <div className=" w-[60%]   list-none flex justify-center items-center gap-10">
 
 <li><Link to=''>Home</Link></li>
-<li><Link to=''>Destinations</Link></li>  
+<li><Link to='about'>About</Link></li>  
 <li><Link to=''>Tour</Link></li> 
 
  {
@@ -33,7 +30,7 @@ const Nav = () => {
   <li><Link to='myProfile'>My profile</Link></li> 
   </>
  }
-  <li><Link to='home'>Contact</Link></li>
+  <li><Link to='experience'>Experience</Link></li>
 </div>
             </div>
            
@@ -41,7 +38,7 @@ const Nav = () => {
             {
   user ? (
     <>
-       {/* <p>Welcome, {user.email}</p> */}
+       <p>Welcome, {user.email}</p>
 <img src={user.photoURL} alt=""  className="rounded-full w-10 h-10"/>
       <button
         className="btn bg-[#2E7D32] text-white"
@@ -57,7 +54,7 @@ const Nav = () => {
 }
                
             
-                <button className="btn text-[#03A9F4] hidden md:block"><Link>Explore more</Link></button>
+            
             
                     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -77,15 +74,18 @@ const Nav = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow">
-        <li><a>Item 1</a></li>
+        <li><Link to=''>Home</Link></li>
         <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
+         <Link to='about'>About</Link>
+         
         </li>
-        <li><a>Item 3</a></li>
+        {
+  user && <>
+  <li><Link to='myProfile'>My profile</Link></li> 
+  </>
+ }
+        <li><Link>Tour</Link></li>
+     
       </ul>
       </div>
    

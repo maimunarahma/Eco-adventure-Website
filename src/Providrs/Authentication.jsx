@@ -8,11 +8,11 @@ import { createContext, useEffect, useState } from "react";
 const Authentication = ({children}) => {
 
     const createUser=(email,password)=>{
+        return createUserWithEmailAndPassword(auth,email,password);
        
-        return signInWithEmailAndPassword(auth,email,password);
     }
      const LoginUser=(email,password)=>{
-        return createUserWithEmailAndPassword(auth,email,password);
+        return signInWithEmailAndPassword(auth,email,password);
     }
      const [user, setUser]= useState(null);
      useEffect(()=>{

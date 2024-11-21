@@ -23,6 +23,7 @@ const Authentication = ({children}) => {
             unSubscribe()
           }
         },[])
+                
      const signOutUser=()=>{
         signOut(auth)
      }

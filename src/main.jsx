@@ -11,6 +11,8 @@ import SignUp from './Components/SignUp.jsx'
 import Login from './Components/Login.jsx'
 import Error404 from './Components/Error404.jsx'
 import UpdatePassword from './Components/UpdatePassword.jsx'
+import MyProfile from './Components/MyProfile.jsx'
+import Privet from './route/privet.jsx'
 
 
 const router=createBrowserRouter([{
@@ -37,6 +39,9 @@ const router=createBrowserRouter([{
   },{
     path:'/updatePassword',
     element:<UpdatePassword></UpdatePassword>
+  },{
+    path:'myProfile',
+    element:<Privet><MyProfile></MyProfile></Privet>,
   }]
 }])
 

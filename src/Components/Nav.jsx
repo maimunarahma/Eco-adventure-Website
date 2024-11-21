@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import logo from "../assets/vector-logo-ecotravel-tourism-camping-260nw-1626800671.jpg"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { authContext } from "../Providrs/Authentication";
 
 
@@ -8,32 +8,41 @@ import { authContext } from "../Providrs/Authentication";
 const Nav = () => {
   const {user, signOutUser}=useContext(authContext);
   console.log(user)
+  const location = useLocation(); // Get current location
+  const currentUrl = location.pathname;
+  console.log(currentUrl)
   const handleSignOut=()=>{
     signOutUser();
   }
     return (
-        <div>
-                <div className="flex justify-between items-center mx-auto">
-           <div className="navbar-start">
-            <img src={logo} alt="" className="w-[15%]" />
+        <div className="w-full  mx-auto px-0">
+                <div className="flex justify-between items-center">
+           <div className="w-[20%]">
+            <img src={logo} alt="" className="md:w-[15%] w-[30%]" />
             
             </div> 
             <div className="hidden md:block">
-            <div className="navbar-center   list-none flex justify-center items-center gap-10">
+            <div className=" w-[60%]   list-none flex justify-center items-center gap-10">
 
 <li><Link to=''>Home</Link></li>
 <li><Link to=''>Destinations</Link></li>  
 <li><Link to=''>Tour</Link></li> 
- <li className=""><Link to=''>Why Us</Link></li> 
+
+ {
+  user && <>
+  <li><Link to='myProfile'>My profile</Link></li> 
+  </>
+ }
   <li><Link to='home'>Contact</Link></li>
 </div>
             </div>
            
-            <div className="navbar-end flex justify-end gap-3">
+            <div className=" w-[20%] flex justify-end gap-3">
             {
   user ? (
     <>
-       <p>Welcome, {user.email}</p>
+       {/* <p>Welcome, {user.email}</p> */}
+<img src={user.photoURL} alt=""  className="rounded-full w-10 h-10"/>
       <button
         className="btn bg-[#2E7D32] text-white"
         onClick={handleSignOut}>
@@ -50,7 +59,7 @@ const Nav = () => {
             
                 <button className="btn text-[#03A9F4] hidden md:block"><Link>Explore more</Link></button>
             
-                    <div className="dropdown">
+                    <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +76,7 @@ const Nav = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow">
         <li><a>Item 1</a></li>
         <li>
           <a>Parent</a>

@@ -2,6 +2,8 @@ import { useContext } from "react";
 // import { AuthContext } from "../Providers/Authentication";
 import { authContext } from "../Providrs/Authentication";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { auth } from "../../firebase";
 
@@ -14,19 +16,33 @@ const SignUp = () => {
              const email= e.target.email.value;
              const password= e.target.password.value;
              console.log(email, password)
+             const formData = new FormData(e.target);
+             const imageUrl = formData.get('image');
+             console.log('Image URL:', imageUrl);
              createUser(email,password)
              .then((result) =>{
              setUser(result.user);
              navigate('/');
+             toast.success('Registration successful! 🎉',
+              {
+                position:"top-center"
+              }
+            );
              })
           .catch((error)=>{
               console.log(error)
+              toast.error('Registration failed! ',
+                {
+                  position:"top-center"
+                }
+              );
              })
              
         }
     return (
         <div className="w-full p-6">
             <h1 className="font-bold text-3xl mt-3 text-center ">Register Now</h1>
+            <ToastContainer />
             <div>
                 
             <form className="card-body" onSubmit={handleForm}>
@@ -35,6 +51,12 @@ const SignUp = () => {
             <span className="label-text">Name</span>
           </label>
           <input type="text" placeholder="name" name='name' className="input input-bordered w-full" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Photo URL</span>
+          </label>
+          <input type="url" placeholder="name" name='image' className="input input-bordered w-full" required />
         </div>
         <div className="form-control">
           <label className="label">

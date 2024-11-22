@@ -7,7 +7,7 @@ import usePageTitle from "./Title";
 const Root = () => {
  usePageTitle()
     return (
-        <div className="mx-auto px-0  ">
+        <div className="container mx-auto px-5 lg:px-0  ">
             <Nav></Nav>
         <Outlet></Outlet>
         <Footer></Footer>

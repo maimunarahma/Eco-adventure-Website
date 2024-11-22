@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { authContext } from "../Providrs/Authentication";
+import { AuthContext } from "../Providrs/Authentication";
 import { Link } from "react-router-dom";
 
 
 const MyProfile = () => {
-    const {user}=useContext(authContext)
+    const {user}=useContext(AuthContext)
   
     return (
         <div className="my-5 h-[1050px] ">

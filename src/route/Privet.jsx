@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { authContext } from "../Providrs/Authentication";
+import { AuthContext } from "../Providrs/Authentication";
 import { Navigate } from "react-router-dom";
 
 
 const Privet = ({children}) => {
-    const {user}=useContext(authContext);
+    const {user}=useContext(AuthContext);
  console.log(user)
 
     if(user){

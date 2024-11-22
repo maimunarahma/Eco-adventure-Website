@@ -3,7 +3,7 @@ import { auth } from "../../firebase";
 
 
 const ProfileUpdate = () => {
-    // const{user}= useContext(authContext)
+    // const{user}= useContext(AuthContext)
     const handleSubmit=e=>{
     const name=e.target.name.value;
     const image=e.target.image.value;

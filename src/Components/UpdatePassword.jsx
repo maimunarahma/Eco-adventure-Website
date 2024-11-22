@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { authContext } from "../Providrs/Authentication";
+import { AuthContext } from "../Providrs/Authentication";
 
 
 const UpdatePassword = () => {
-    const { setUser, createUser, LoginUser}=useContext(authContext);
+    const { setUser, createUser, LoginUser}=useContext(AuthContext);
     const update=(e)=>{
         e.preventDefault();
     const email=e.target.email.value;

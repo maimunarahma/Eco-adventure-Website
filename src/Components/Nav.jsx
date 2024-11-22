@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import logo from "../assets/greenwhite-e1616273832133.webp"
 import { Link} from "react-router-dom";
-import { authContext } from "../Providrs/Authentication";
+import { AuthContext } from "../Providrs/Authentication";
 
 
 
 const Nav = () => {
-  const {user, signOutUser}=useContext(authContext);
+  const {user, signOutUser}=useContext(AuthContext);
  
   
   const handleSignOut=()=>{
@@ -61,7 +61,7 @@ const Nav = () => {
         </>
       ) : (
         <button className="btn bg-[#2E7D32] text-white">
-          <Link to="login">Login</Link>
+          <Link to="/auth/login">Login</Link>
         </button>
       )}
 

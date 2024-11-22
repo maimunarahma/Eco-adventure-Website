@@ -17,61 +17,74 @@ import About from './Components/About.jsx'
 import ProfileUpdate from './Components/ProfileUpdate.jsx'
 import Experience from './Components/Experience.jsx'
 import River from './Components/River.jsx'
+import Auth from './Components/Auth.jsx'
 
 
-const router=createBrowserRouter([{
-   path:'/',
-   element:<Authentication><Root></Root></Authentication>,
-   errorElement:<Error404></Error404>,
-   children:[{
-    path:'/',
-    element:<Banner></Banner>,
-    loader:()=>fetch(`travels.json`)
-   },
+const router = createBrowserRouter([
   {
-    path:'/details/:id',
-    element:<Details></Details>,
-    loader:()=>fetch(`travels.json`),
-  
+    path: '/',
+    element: <Root></Root>,
+    errorElement: <Error404></Error404>,
+    children: [{
+      path: '/',
+      element: <Banner></Banner>,
+      loader: () => fetch('/travels.json')
+    },
+    {
+      path: '/details/:id',
+      element: <Details></Details>,
+      loader: () => fetch('/travels.json'),
 
-  },{
-    path:'login',
-    element: <Authentication><Login></Login></Authentication>
-  },{
-    path:'register',
-    element:<Authentication><SignUp></SignUp></Authentication>
-  },{
-    path:'/updatePassword',
-    element:<UpdatePassword></UpdatePassword>
-  },{
-    path:'myProfile',
-    element:<Privet><MyProfile></MyProfile></Privet>,
-  },{
-    path:'about',
-    element:<About></About>
-  },{
-    path:'/myProfile/update',
-    element:<ProfileUpdate></ProfileUpdate>
-  },{
-    path:'experience',
-    element:<Experience></Experience>
+
+    }, {
+      path: '/updatePassword',
+      element: <UpdatePassword></UpdatePassword>
+    }, {
+      path: 'myProfile',
+      element: <Privet><MyProfile></MyProfile></Privet>,
+    }, {
+      path: 'about',
+      element: <About></About>
+    }, {
+      path: '/myProfile/update',
+      element: <ProfileUpdate></ProfileUpdate>
+    }, {
+      path: 'experience',
+      element: <Experience></Experience>
+    },
+    {
+      path: '/experience/river',
+      element: <River></River>,
+      loader: () => fetch(`travels.json`)
+    }
+    ]
   },
+
   {
-    path:'/experience/river',
-    element:<River></River>,
-    loader:()=>fetch(`travels.json`)
+    path:'/auth',
+    element: <Auth></Auth>,
+    errorElement: <Error404></Error404>,
+    children:[
+      {
+        path: '/auth/login',
+        element:<Login></Login>
+      },
+      {
+        path: '/auth/register',
+        element: <SignUp></SignUp>
+      }
+    ]
   }
-]
-}])
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Authentication>
-    <RouterProvider router={router}>
+      <RouterProvider router={router}>
 
-</RouterProvider>
+      </RouterProvider>
     </Authentication>
-   
-    
+
+
   </StrictMode>,
 )

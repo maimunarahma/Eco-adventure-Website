@@ -5,54 +5,44 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
-// import { createUserWithEmailAndPassword } from "firebase/auth";
-// import { auth } from "../../firebase";
+
 
 
 const SignUp = () => {
-      const {createUser,setUser,user}= useContext(authContext);
+      const {createUser,setUser}= useContext(authContext);
   
       console.log(createUser)
       const navigate = useNavigate();
+
       function validatePassword(password) {
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         return passwordRegex.test(password);
       }
-      
-  
         const handleForm=(e)=>{
              e.preventDefault();
              const email= e.target.email.value;
              const password= e.target.password.value;
-             console.log(email, password)
-             const img= e.target.image.value;
-             user.photoURL=img;
-             console.log(img)
+         const photo=e.target.image.value;
              if (!validatePassword(password)) {
-              toast.error('Password must contain 8+ characters, uppercase, lowercase, number, and special character.', {
+              toast.error('Password must contnain 8+ characters, uppercase, lowercase, number, and special character.', {
                 position: "top-center",
               });}
              createUser(email,password)
              .then((result) =>{
            
-              updateProfile(result.user, {
-                photoURL: img,
+              setUser(result.user);
+              updateProfile(result.user,{
+                photoURL:photo
               })
-              setUser({ ...result.user, photoURL: img });
+           
+              toast.success("Registration successful! 🎉", { position: "top-center" });
+              e.target.reset();
              navigate('/');
-             toast.success('Registration successful! 🎉',
-              {
-                position:"top-center"
-              }
-            );
+         
              })
           .catch((error)=>{
-              console.log(error)
-              toast.error('Registration failed! ',
-                {
-                  position:"top-center"
-                }
-              );
+              console.log(error.message)
+              toast.error('Registration failed! ',{position:"top-center"});
              })
              
         }
@@ -64,7 +54,7 @@ const SignUp = () => {
             <ToastContainer />
             <div>
                 
-            <form className="card-body" onSubmit={handleForm}>
+            <form className="card-body border-2 rounded-lg md:p-28 p-3" onSubmit={handleForm}>
             <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
@@ -76,10 +66,10 @@ const SignUp = () => {
             <span className="label-text">Photo URL</span>
           </label>
           <input
-              type="file"
+            
               name="image"
-              className="file-input file-input-bordered w-full max-w-xs"
-              accept="image/*" 
+              className=" input input-bordered w-full max-w-xs"
+            
               required
             />
         </div>
@@ -106,7 +96,7 @@ const SignUp = () => {
           <h1 className="text-black font-bold">Login Now! <span className="text-red-600 "><Link to='login' state={{name}}>Login</Link></span></h1>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Register</button>
+          <button className="btn btn-primary w-1/4">Register</button>
         </div>
       </form>
 

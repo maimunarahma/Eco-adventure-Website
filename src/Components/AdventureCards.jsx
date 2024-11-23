@@ -25,7 +25,7 @@ const AdventureCards = () => {
     return (
 
 
-        <div className="mt-5 w-[900px] mx-auto" >
+        <div className="mt-5 w-full lg:w-[900px] mx-auto" >
             <h1 className="text-black text-3xl font-bold text-center">Adventure Experiences</h1>
 
             <div className="">
@@ -34,11 +34,11 @@ const AdventureCards = () => {
 
                         {
                             datas.map(data => <div key={data.id} className=" border-2 p-6 border-black rounded bg-slate-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                <img src={data.image} alt="" className="w-full h-[550px]  rounded-lg" />
+                                <img src={data.image} alt="" className="w-full h-[300px] lg:h-[550px] p-3  rounded-lg" />
 
-                                <div className="">
+                                <div className="p-3">
                                     <h2 className="card-title text-4xl font-bold">{data.adventureTitle}</h2>
-                                    {data.ecoFriendlyFeatures.map((features, ind) => <li key={ind}>{features}   </li>)}
+                                    {data.ecoFriendlyFeatures.map((features, ind) => <li key={ind} className="text-xl p-1">{features}   </li>)}
                                     <div className="card-actions justify-start ">
                                         {user ? <>
 

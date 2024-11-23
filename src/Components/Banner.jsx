@@ -5,9 +5,9 @@ import AdventureCards from "./AdventureCards";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="w-full  mt-5">
 
-      <div className="w-full mt-5">
+      <div className="w-full ">
         <div className="carousel ">
           <div id="slide1" className="carousel-item relative w-full">
             <img

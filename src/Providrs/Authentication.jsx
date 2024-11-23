@@ -1,7 +1,8 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, reauthenticateWithCredential, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 
 import { auth } from "../../firebase";
 import { createContext, useEffect, useState } from "react";
+import { EmailAuthProvider } from "firebase/auth/web-extension";
 
 export const AuthContext = createContext(null);
 // eslint-disable-next-line react/prop-types
@@ -24,6 +25,8 @@ const Authentication = ({ children }) => {
         }
     }, [])
 
+   
+      
     const updateProfileUser = (updateInfo) =>{
         return updateProfile(auth.currentUser,updateInfo);
     }
@@ -38,7 +41,8 @@ const Authentication = ({ children }) => {
         user,
         setUser,
         signOutUser,
-        updateProfileUser
+        updateProfileUser,
+       
     }
 
     return (

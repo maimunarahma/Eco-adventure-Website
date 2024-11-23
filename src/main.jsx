@@ -55,7 +55,7 @@ const router = createBrowserRouter([
     {
       path: '/experience/river',
       element: <River></River>,
-      loader: () => fetch(`travels.json`)
+      loader: () => fetch('/travels.json')
     }
     ]
   },

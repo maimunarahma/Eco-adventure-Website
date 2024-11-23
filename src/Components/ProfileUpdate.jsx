@@ -9,9 +9,11 @@ const ProfileUpdate = () => {
     const image=e.target.image.value;
     updateProfile(auth.currentUser, {
         displayName: name, photoURL: image
-      }).then(() => {
+      })
+      .then(() => {
     alert("rofile updated")
-      }).catch((error) => {
+      })
+      .catch((error) => {
         // An error occurred
         alert(error.message)
         // ...

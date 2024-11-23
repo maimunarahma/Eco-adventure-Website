@@ -1,49 +1,54 @@
-import { useContext } from "react";
-import { AuthContext } from "../Providrs/Authentication";
-
+import { useState } from "react";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "../../firebase";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const UpdatePassword = () => {
-    const { setUser, createUser, LoginUser}=useContext(AuthContext);
-    const update=(e)=>{
-        e.preventDefault();
-    const email=e.target.email.value;
-    const password=e.target.password.value;
- createUser(email,password)
-LoginUser(email,password)
- console.log(email,password)
-  .then(res=>{
-     setUser(res.user)
-    
-  })
-  .catch(err=>{
-    console.log(err)
-  })
+  const [email, setEmail] = useState("");
 
+  const handlePasswordReset = async (e) => {
+    e.preventDefault();
+
+    try {
+      await sendPasswordResetEmail(auth, email);
+      toast.success(
+        "Password reset email sent! Please check your inbox.",
+        { position: "top-center" }
+      );
+    } catch (error) {
+      console.error("Error sending reset email:", error.message);
+      toast.error(`Failed to send reset email: ${error.message}`, {
+        position: "top-center",
+      });
     }
-    return (
-        <div>
-              <form className="card-body" onSubmit={update}>
+  };
+
+  return (
+    <div>
+      <h1 className="text-center text-2xl font-bold">Reset Your Password</h1>
+      <form className="card-body" onSubmit={handlePasswordReset}>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" name='email' className="input input-bordered" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Update Password</span>
-          </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            name="email"
+            className="input input-bordered"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Send Reset Email</button>
         </div>
       </form>
-        </div>
-    );
+      <ToastContainer />
+    </div>
+  );
 };
 
 export default UpdatePassword;

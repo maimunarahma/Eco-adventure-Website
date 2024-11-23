@@ -7,14 +7,14 @@ import { AuthContext } from "../Providrs/Authentication";
 
 const Nav = () => {
   const {user, signOutUser}=useContext(AuthContext);
- 
+  console.log(user)
   
   const handleSignOut=()=>{
     signOutUser();
   }
     return (
 //      
-<div className="w-full mx-auto px-0 mt-3">
+<div className="w-full mx-auto px-0 mt-3  ">
   <div className="flex justify-between items-center">
     {/* Logo */}
     <div className="w-[20%]">
@@ -60,10 +60,11 @@ const Nav = () => {
           </button>
         </>
       ) : (
-        <button className="btn bg-[#2E7D32] text-white">
-          <Link to="/auth/login">Login</Link>
-        </button>
-      )}
+        <Link to="/auth/login" className="btn bg-[#2E7D32] text-white">
+          <p>Login</p>
+        </Link>
+      )
+    }
 
       {/* Mobile Dropdown */}
       <div className="dropdown dropdown-end">

@@ -87,7 +87,7 @@ A responsive blog website designed to showcase eco-friendly travel adventures li
 
 ## 🚀 Live Demo
 
-[Live Application URL](#https://eco-travel-blog.web.app/)  
+[Live Application URL](https://eco-travel-blog.web.app/)  
 
 ## 📚 How to Run Locally
 

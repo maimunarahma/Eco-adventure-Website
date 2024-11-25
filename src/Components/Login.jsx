@@ -56,6 +56,7 @@ const Login = () => {
         toast.error("Google login failed! ", {
           position: "top-center",
         });
+        navigate("/");
       });
   }
 

@@ -46,7 +46,7 @@ const AdventureCards = () => {
                                             <button className="btn bg-green-900 text-white" ><Link to={`details/${data.id}`} state={{ data }}>Explore More</Link></button>
 
 
-                                        </> : <button className="btn bg-green-900 text-white"><Link to='login'>Explore More</Link></button>}
+                                        </> : <button className="btn bg-green-900 text-white"><Link to='/auth/login'>Explore More</Link></button>}
 
                                     </div>
                                 </div>

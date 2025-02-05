@@ -1,11 +1,11 @@
-# Eco-Adventure Experiences 🌿
+# 🌿 Eco-Adventure Experiences
 
 A responsive blog website designed to showcase eco-friendly travel adventures like mountain treks, ocean dives, and wildlife safaris. Users can browse through various eco-adventure options, learn more about them, consult experts, and manage their profiles with secure login and registration.
 
 ## 🌟 Features
 
 1. **Dynamic Adventure Experiences**  
-   - View a wide range of eco-adventures with detailed information, including cost, location, and eco-friendly features.
+   - View a wide range of eco-adventures with detailed information, including cost, location, and eco-friendly features.  
    - "Explore Now" button redirects users to detailed adventure pages.
 
 2. **Authentication & Authorization**  
@@ -94,3 +94,20 @@ A responsive blog website designed to showcase eco-friendly travel adventures li
 1. Clone the repository:
    ```bash
    git clone <repository_url>
+   cd eco-adventure-experiences
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+---
+
+Enjoy exploring **Eco-Adventure Experiences**! 🌍✨
+
